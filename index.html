@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFPB - Cadastro de Usuários</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul#listaUsuarios {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        ul#listaUsuarios li {
+            background-color: #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        ul#listaUsuarios li button {
+            background-color: #dc3545;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        ul#listaUsuarios li button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+<h1>Cadastro de Usuários</h1>
+
+<div class="form-container">
+    <input id="nome" placeholder="Nome" type="text">
+    <input id="idade" placeholder="Idade" type="number">
+    <input id="cpf" placeholder="CPF" maxlength="14" type="text">
+    <button onclick="inserirUsuario()">Inserir Usuário</button>
+</div>
+
+<ul id="listaUsuarios"></ul>
+
+<script src="js/script.js"></script>
+</body>
+</html>
